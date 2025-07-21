@@ -1,0 +1,25 @@
+# Task 1: Basic SQL Queries – Employees DB
+
+This folder contains Task 1 for my SQL practice series based on the `employees` dataset from the [datacharmer/test_db](https://github.com/datacharmer/test_db) repository.
+
+##  What I Did
+
+- Set up MySQL using test_db dataset (~2.8M rows)
+- Ran 12+ core queries using:
+  - `SELECT` columns
+  - `WHERE`, `BETWEEN`, `LIKE`
+  - `ORDER BY`, `LIMIT`, `OFFSET`
+  - Pattern matching and data validation
+
+##  Files
+
+- `SQL_Task_1_Queries.sql` – All SQL queries
+- `SQL_Task_1_Report.docx` – Report with explanations
+- `screenshots/` – Screenshots showing query output in CLI
+
+##  Sample Queries
+
+sql
+SELECT emp_no, salary, salary * 1.10 AS increased_salary
+FROM salaries
+LIMIT 10;
