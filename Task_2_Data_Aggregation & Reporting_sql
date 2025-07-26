@@ -1,0 +1,38 @@
+# Task 2 – Data Aggregation & Reporting with Real Dataset
+
+This folder contains all `.sql` files and queries for **Task 2** of the SQL Practice Series.  
+It focuses on advanced SQL techniques involving multi-table joins, aggregation, window functions, and data validation using the MySQL Employees Sample Database.
+
+> ✅ Dataset Source: [DataCharmer/test_db](https://github.com/datacharmer/test_db)
+
+---
+
+## 📘 Topics Covered
+
+1. Department Salary Summary  
+2. Yearly Hiring Trends  
+3. High-Earning Departments using `HAVING`  
+4. Salary Distribution Report with Buckets  
+5. Data Validation Checks  
+6. Group-Level Filtering & Aggregation Logic  
+7. Formatting & Output Presentation
+
+---
+
+## 🗃️ Dataset Used
+
+**MySQL Employees Sample Database**  
+Tables used: `employees`, `salaries`, `departments`, `dept_emp`
+
+---
+
+## 🛠️ Run Instructions
+
+- Clone or import the [test_db](https://github.com/datacharmer/test_db) into your MySQL instance
+- Run each `.sql` file inside this folder using **MySQL CLI** or **Workbench**
+- Review outputs and take screenshots for validation
+- Upload screenshots under the `task2screenshots/` folder
+
+---
+
+## ✅ Task Status: **IN PROGRESS**
