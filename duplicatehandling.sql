@@ -11,6 +11,20 @@ SELECT DISTINCT
 FROM titles t 
 WHERE t.to_date > CURDATE();
 
+mysql> SELECT DISTINCT t.title AS unique_title FROM titles t WHERE t.to_date > CURDATE();
++--------------------+
+| unique_title       |
++--------------------+
+| Senior Engineer    |
+| Staff              |
+| Senior Staff       |
+| Engineer           |
+| Assistant Engineer |
+| Technique Leader   |
+| Manager            |
++--------------------+
+7 rows in set (0.90 sec)
+
 -- Example Query 2: Unique job titles for employees in 'Development'
 SELECT DISTINCT  
     t.title AS unique_title
@@ -23,8 +37,31 @@ WHERE t.to_date > CURDATE()
   AND de.to_date > CURDATE()
   AND d.dept_name = 'Development';
 
+mysql> SELECT DISTINCT t.title AS unique_title FROM titles t JOIN dept_emp de ON t.emp_no = de.emp_no JOIN departments d ON de.dept_no = d.dept_no WHERE t.to_date > CURDATE() AND de.to_date > CURDATE() AND d.dept_name = 'Development';
++--------------------+
+| unique_title       |
++--------------------+
+| Senior Engineer    |
+| Engineer           |
+| Technique Leader   |
+| Assistant Engineer |
+| Senior Staff       |
+| Staff              |
+| Manager            |
++--------------------+
+7 rows in set (1.69 sec)
+
+
 -- Example Query 3: Count of unique job titles currently in the company
 SELECT  
     COUNT(DISTINCT t.title) AS total_unique_titles
 FROM titles t
 WHERE t.to_date > CURDATE();
+
+mysql> SELECT COUNT(DISTINCT t.title) AS total_unique_titles FROM titles t WHERE t.to_date > CURDATE();
++---------------------+
+| total_unique_titles |
++---------------------+
+|                   7 |
++---------------------+
+1 row in set (0.68 sec)
